@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,6 +134,63 @@
                                             <outlet property="usernameLabel" destination="bCK-dK-GDH" id="6Tt-HX-LDz"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="kTC-xu-FLm" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="400" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kTC-xu-FLm" id="XWk-qV-ghv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Yakut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bS5-fV-Q6V">
+                                                    <rect key="frame" x="16" y="8" width="43" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is a fake comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPW-5d-irx">
+                                                    <rect key="frame" x="66" y="8" width="176" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bS5-fV-Q6V" firstAttribute="top" secondItem="XWk-qV-ghv" secondAttribute="top" constant="8" id="0sD-qi-Rbp"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tPW-5d-irx" secondAttribute="trailing" constant="8" id="7mR-o3-5HH"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bS5-fV-Q6V" secondAttribute="bottom" constant="8" id="W5b-Qg-CtM"/>
+                                                <constraint firstItem="bS5-fV-Q6V" firstAttribute="leading" secondItem="XWk-qV-ghv" secondAttribute="leading" constant="16" id="cIh-Vf-Cf9"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tPW-5d-irx" secondAttribute="bottom" constant="8" id="cUg-jR-3Wc"/>
+                                                <constraint firstItem="tPW-5d-irx" firstAttribute="leading" secondItem="bS5-fV-Q6V" secondAttribute="trailing" constant="8" id="fEJ-Np-HAo"/>
+                                                <constraint firstItem="tPW-5d-irx" firstAttribute="top" secondItem="XWk-qV-ghv" secondAttribute="top" constant="8" id="fgC-WM-Xda"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="tPW-5d-irx" id="2Ho-zW-IfB"/>
+                                            <outlet property="nameLabel" destination="bS5-fV-Q6V" id="Ie1-M5-2bU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddCommentCell" id="5x3-oc-wf2">
+                                        <rect key="frame" x="0.0" y="444" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5x3-oc-wf2" id="6Kw-8a-lkF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add a comment..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrQ-m4-qKZ">
+                                                    <rect key="frame" x="16" y="8" width="136" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="qrQ-m4-qKZ" secondAttribute="bottom" constant="8" id="8t3-6q-CaF"/>
+                                                <constraint firstItem="qrQ-m4-qKZ" firstAttribute="top" secondItem="6Kw-8a-lkF" secondAttribute="top" constant="8" id="Ulj-89-9f7"/>
+                                                <constraint firstAttribute="trailing" secondItem="qrQ-m4-qKZ" secondAttribute="trailing" constant="8" id="UnO-aw-iZU"/>
+                                                <constraint firstItem="qrQ-m4-qKZ" firstAttribute="leading" secondItem="6Kw-8a-lkF" secondAttribute="leading" constant="16" id="cAQ-JV-yEs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -141,6 +198,11 @@
                         <viewLayoutGuide key="safeArea" id="TGL-hG-4Rr"/>
                     </view>
                     <navigationItem key="navigationItem" id="479-lO-mgY">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="R8z-nA-sGL">
+                            <connections>
+                                <action selector="onLogoutButton:" destination="y5K-L0-txg" id="vyp-7A-RJn"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+" image="insta_camera_btn" id="3bG-V5-F8T">
                             <connections>
                                 <segue destination="FXY-OV-ksl" kind="presentation" id="Rua-Hf-cjb"/>
@@ -206,7 +268,7 @@
         <!--Navigation Controller-->
         <scene sceneID="jWe-YO-ELM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ciI-c2-Od6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="ciI-c2-Od6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fjm-9M-KnG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
